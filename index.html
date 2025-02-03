@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Sasane - IT Engineer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Custom Gradient Background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6, #6ee7b7);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glass Morphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hover Scale Animation */
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(45deg, #6ee7b7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Shape Divider */
+        .custom-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .custom-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+        .custom-shape .shape-fill {
+            fill: #1e293b;
+        }
+
+        /* Tabs Styling */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navigation -->
+   <!-- Navigation -->
+   <nav class="p-6 glass fixed w-full top-0 z-50 bg-gray-800/80 backdrop-blur-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold gradient-text">Ishan Sasane</a>
+
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Navigation Links -->
+        <div id="menu" class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static w-full left-0 top-16 bg-gray-800 md:bg-transparent z-50 md:w-auto md:items-center">
+            <a href="#about" class="block p-4 md:p-0 text-white hover:text-blue-400 transition-colors">About</a>
+            <a href="#experience" class="block p-4 md:p-0 text-white hover:text-blue-400 transition-colors">Experience</a>
+            <a href="#skills" class="block p-4 md:p-0 text-white hover:text-blue-400 transition-colors">Skills</a>
+            <a href="#projects" class="block p-4 md:p-0 text-white hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#contact" class="block p-4 md:p-0 text-white hover:text-blue-400 transition-colors">Contact</a>
+            <button id="language-toggle" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">日本語</button>
+        </div>
+    </div>
+</nav>
+
+<script>
+  // Handle Mobile Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Language toggle functionality
+document.getElementById("language-toggle").addEventListener("click", function() {
+    let currentText = this.innerText;
+    if (currentText === "日本語") {
+        // Redirect to a Japanese version of the page or another file
+        window.location.href = "japanese-portfolio.html"; // replace with your file path
+    } else {
+        // Redirect back to the English version
+        window.location.href = "portfolio.html"; // replace with your file path
+    }
+});
+
+</script>
+
+
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center gradient-bg relative">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold gradient-text">Ishan Sasane</h1>
+            <p class="mt-4 text-xl text-gray-200">Jack of all trades, master of none, though oftentimes better than a master of one.</p>
+            <a href="#about" class="mt-8 inline-block px-8 py-3 glass hover-scale text-white rounded-lg">Explore My Work</a>
+        </div>
+        <!-- Custom Shape Divider -->
+        <div class="custom-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold gradient-text mb-8 text-center">About Me</h2>
+            <div class="glass p-8 rounded-lg max-w-3xl mx-auto">
+                <p class="text-gray-300 leading-relaxed text-center">
+                    I am an enthusiastic and innovative Android Developer looking to apply my technical
+                    skills in a dynamic team environment. With strong fundamentals in Android
+                    development and hands-on experience in mobile and web application development,
+                    I excel across multiple platforms. My pride lies in delivering high-quality projects,
+                    strong self-management, and teamwork.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold gradient-text mb-8 text-center">Experience</h2>
+            <div class="glass p-8 rounded-lg">
+                <!-- Tabs -->
+                <div class="tabs-container bg-gray-700 rounded-lg overflow-hidden">
+                    <div class="flex">
+                        <button onclick="showTab('tab1')" class="tab-button active w-full py-4 text-center bg-gray-800 text-white hover:bg-gray-600 focus:outline-none">Python Development</button>
+                        <button onclick="showTab('tab2')" class="tab-button w-full py-4 text-center bg-gray-800 text-white hover:bg-gray-600 focus:outline-none">Editorial Intern</button>
+                    </div>
+                </div>
+                <!-- Tab Content -->
+                <div id="tab1" class="tab-content active mt-4">
+                    <h3 class="text-2xl font-bold text-blue-400">Python Development</h3>
+                    <p class="text-gray-300 mt-2">ESTEEM | Jun 2022 - Oct 2022</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-4">
+                        <li>Completed a 4-month in-plant training program centered on Python
+                            development, where I gained valuable, hands-on experience in real-world
+                            applications.
+                            Contributed to projects that involved data processing, automation, and web
+                            development, effectively applying Python programming principles.
+                            Improved my problem-solving and debugging skills by actively participating in
+                            coding exercises and collaborating on various projects.</li>
+                    </ul>
+                </div>
+                <div id="tab2" class="tab-content mt-4">
+                    <h3 class="text-2xl font-bold text-blue-400">Editorial Intern</h3>
+                    <p class="text-gray-300 mt-2">Vaave| Jun 2022 - Dec 2023</p>
+                    <ul class="list-disc list-inside text-gray-300 mt-4">
+                        <li>Collaborated with the editorial team to create and edit engaging content for
+                            blogs, newsletters, and social media platforms, enhancing brand visibility and
+                            user engagement .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .tabs-container {
+            background-color: #1F2937; /* Dark background for tab container */
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+    
+        .tab-button {
+            flex: 1;
+            padding: 1rem;
+            background-color: #2D3748;
+            color: white;
+            border: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+    
+        .tab-button.active {
+            background-color: #4A5568;
+        }
+    
+        .tab-button:hover {
+            background-color: #4A5568;
+        }
+    
+        .tab-content {
+            display: none;
+        }
+    
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+    
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+    
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+    
+            document.getElementById(tabId).classList.add('active');
+            const activeButton = Array.from(buttons).find(button => button.textContent.toLowerCase().includes(tabId.split('tab')[1].toLowerCase()));
+            activeButton.classList.add('active');
+        }
+    </script>
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold gradient-text mb-8 text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Android</h3>
+                    <p class="text-gray-300 mt-2">Flutter , Android Studio (Java)</p>
+                </div>
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Frontend</h3>
+                    <p class="text-gray-300 mt-2">HTML, CSS, JavaScript, React, Tailwind CSS</p>
+                </div>
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Backend</h3>
+                    <p class="text-gray-300 mt-2">Django, Node.js, Express, Python</p>
+                </div>
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Database</h3>
+                    <p class="text-gray-300 mt-2">MySQL, MongoDB</p>
+                </div>
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">DevOps</h3>
+                    <p class="text-gray-300 mt-2">Docker, Kubernetes, CI/CD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold gradient-text mb-8 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Enhancing Feedback Management
+                        with Sanjivani</h3>
+                    <p class="text-gray-300 mt-2"> <li>Revamped the feedback management system on
+                        Android, which cut user response time by 25% and
+                        boosted feedback submissions by 40% in just 3
+                        months through enhanced integration
+                        improvement</li></p>
+                </div>
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Streamlining Temple Bookings</h3>
+                    <p class="text-gray-300 mt-2">
+                        <li>Designed and developed a PHP-based backend and
+                            Android application to simplify temple booking
+                            processes, enabling 5,000+ users to book services
+                            seamlessly</li>
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-bold text-blue-400">Implementing CO/PO Mapping
+                        through Python and Web
+                        Integration</h3>
+                    <p class="text-gray-300 mt-2">
+                        <li>Integrated course outcomes and program outcomes
+                            using Python.</li>
+                        <li>Developed a web application for mapping
+                            educational outcomes.</li>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold gradient-text mb-8">Contact Me</h2>
+            <p class="text-gray-300 mb-4">Feel free to reach out to me at <a href="mailto:ishansasane@example.com" class="text-blue-400">ishansasane@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900/50 glass">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-300">&copy; 2023 Ishan Sasane. All rights reserved.</p>
+            <a href="IshanSasaneResume.pdf" download class="mt-4 inline-block px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">Download Resume</a>
+        </div>
+    </footer>
+
+    <!-- Script for Tabs -->
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
