@@ -1,5 +1,7 @@
 # 💫 About Me:
-I am a android developer , and now i am currently learning GoLang
+🚀 Tech Enthusiast | Full-Stack Developer | AI & ML Learner
+
+I'm passionate about building Android apps, crafting web applications, and exploring the world of AI & Data Science. With a strong foundation in software development, I love solving problems, learning new technologies, and creating impactful solutions.
 
 
 # 💻 Tech Stack:
