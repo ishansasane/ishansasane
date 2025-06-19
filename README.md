@@ -69,15 +69,5 @@
 ### 🏆 GitHub Trophies
 ![trophy](https://github-profile-trophy.vercel.app/?username=ishansasane&theme=onedark&row=1&column=7)
 
----
-
-### ✨ Featured Projects
-
-<!-- You can add your featured projects here with links -->
-🔗 [Project 1](https://github.com/ishansasane/project1) - Short description  
-🔗 [Project 2](https://github.com/ishansasane/project2) - Short description  
-🔗 [Project 3](https://github.com/ishansasane/project3) - Short description  
-
----
 
 <h3 align="center">⚡ Fun fact: I breathe code and dream in algorithms!</h3>
